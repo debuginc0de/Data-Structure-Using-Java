@@ -20,8 +20,8 @@ public class FirstAddRemove {
         new_node.next = Node.head;
         Node.head = new_node;
 
-        if (Node.tail == null) {
-            Node.tail = new_node;
+        if (Node.head == null) {
+            Node.tail = Node.tail = new_node;
         }
         size++; // increment size
     }
