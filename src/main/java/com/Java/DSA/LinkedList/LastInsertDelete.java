@@ -1,4 +1,4 @@
-package com.Java.DSA.Data.Structure.Using.Java.LinkedList;
+package com.Java.DSA.LinkedList;
 
 class Node2{
     int data;

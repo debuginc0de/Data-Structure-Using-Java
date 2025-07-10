@@ -1,4 +1,4 @@
-package com.Java.DSA.Data.Structure.Using.Java;
+package com.Java.DSA;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
