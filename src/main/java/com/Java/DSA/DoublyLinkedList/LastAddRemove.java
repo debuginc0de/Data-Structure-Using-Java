@@ -1,17 +1,5 @@
 package com.Java.DSA.DoublyLinkedList;
-class Node2{
-    int data;
-    Node2 next;
-    Node2 prev;
 
-    public Node2(int data){
-        this.data=data;
-        this.next=null;
-        this.prev=null;
-    }
-    public static Node2 head;
-    public static Node2 tail;
-}
 public class LastAddRemove {
     private static int size=0;
 
@@ -49,7 +37,7 @@ public class LastAddRemove {
     public static void printList(Node2 head) {
         Node2 curr = head;
         while (curr != null) {
-            System.out.print(STR."\{curr.data} <-> ");
+            System.out.print(curr.data+" <-> ");
             curr = curr.next;
         }
         System.out.println("null");
