@@ -1,42 +1,33 @@
 package com.Java.DSA.LinkedList;
-class Node3{
-    int data;
-    Node3 next;
-    public Node3(int data){
-        this.data=data;
-        this.next=null;
-    }
-    public static Node3 head;
-    public static Node3 tail;
-}
+
 public class AddRemovePosition {
     private static int size=0;
     public static void AddLast(int data){
-        Node3 newnode=new Node3(data);
+        Node newnode=new Node(data);
 
-        if (Node3.head == null) {
-            Node3.head = newnode;
+        if (Node.head == null) {
+            Node.head = newnode;
         }else {
-            Node3.tail.next=newnode;
+            Node.tail.next=newnode;
         }
-        Node3.tail = newnode;
+        Node.tail = newnode;
         size++;
     }
     public static void AddPosition(int index,int data) {
         int i=0;
-        Node3 temp=Node3.head;
+        Node temp=Node.head;
         while (i<index-1){
             temp=temp.next;
             i++;
         }
-        Node3 newnode=new Node3(data);
+        Node newnode=new Node(data);
         newnode.next=temp.next;
         temp.next=newnode;
         size++;
     }
     public static int RemovePosition(int index){
         int i=0;
-        Node3 temp=Node3.head;
+        Node temp=Node.head;
         while (i<index-1){
             temp=temp.next;
             i++;
@@ -51,7 +42,7 @@ public class AddRemovePosition {
     }
 
     public static void printList() {
-        Node3 curr = Node3.head;
+        Node curr = Node.head;
         while (curr != null) {
             System.out.print(curr.data + " -> ");
             curr = curr.next;

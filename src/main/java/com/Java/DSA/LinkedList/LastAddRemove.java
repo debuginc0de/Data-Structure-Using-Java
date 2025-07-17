@@ -1,46 +1,36 @@
 package com.Java.DSA.LinkedList;
-class Node2{
-    int data;
-    Node2 next;
 
-    public Node2(int data){
-        this.data=data;
-        this.next=null;
-    }
-    public static Node2 head;
-    public static Node2 tail;
-}
 public class LastAddRemove {
     private static int size=0;
     public static void AddLast(int data){
-        Node2 newnode=new Node2(data);
+        Node newnode=new Node(data);
 
-        if (Node2.head == null) {
-            Node2.head = newnode;
-            Node2.tail = newnode;
+        if (Node.head == null) {
+            Node.head = newnode;
+            Node.tail = newnode;
         }else {
-            Node2.tail.next=newnode;
-            Node2.tail=newnode;
+            Node.tail.next=newnode;
+            Node.tail=newnode;
         }
         size++;
     }
     public static int RemoveLast(){
-        if (Node2.head == null) throw new IllegalStateException("List is empty");
+        if (Node.head == null) throw new IllegalStateException("List is empty");
         if (size == 1) {
-            int val = Node2.head.data;
-            Node2.head = null;
-            Node2.tail = null;
+            int val = Node.head.data;
+            Node.head = null;
+            Node.tail = null;
             size = 0;
             return val;
         }
-        Node2 prev = Node2.head;
+        Node prev = Node.head;
         // Move to node before tail
-        while (prev.next != Node2.tail) {
+        while (prev.next != Node.tail) {
             prev = prev.next;
         }
-        int value = Node2.tail.data;
+        int value = Node.tail.data;
         prev.next = null;
-        Node2.tail = prev;
+        Node.tail = prev;
         size--;
         return value;
     }
