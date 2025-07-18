@@ -1,0 +1,7 @@
+#. what is Stack?
+Stack is nothing but a structure of a data which was follow LIFO order.
+
+#. Stack using Array.
+#. Stack using LinkedList.
+#. Stack using Queue.
+#. Reverse Stack.
