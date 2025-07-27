@@ -105,6 +105,15 @@ public class AllOperation {
         } while (curr != head);
         System.out.println("(back to head)");
     }
+    public int deletePos(int index){
+        Node p=head;
+        for (int i=0;i<index-2;i++){
+            p=p.next;
+        }
+        Node q=p.next;
+        p.next=q.next;
+        return q.data;
+    }
 
     public static void main(String[] args) {
         AllOperation cll = new AllOperation();
@@ -120,13 +129,18 @@ public class AllOperation {
         cll.preAppend(100);
         cll.printList();    //100 -> 10 -> 20 -> 30 -> 40 -> (back to head)
 
-        cll.DeletePosition(2);
-        cll.printList();    //100 -> 10 -> 30 -> 40 -> (back to head)
+        //cll.DeletePosition(2);
+        //cll.printList();    //100 -> 10 -> 30 -> 40 -> (back to head)
+
+        cll.deletePos(2);
+        cll.printList();    //100 -> 20 -> 30 -> 40 -> (back to head)
 
         cll.delete();
         cll.printList();    //10 -> 20 -> 30 -> 40 -> (back to head)
 
         cll.EndDelete();
         cll.printList();       //10 -> 20 -> 30 -> (back to head)
+
+
     }
 }
